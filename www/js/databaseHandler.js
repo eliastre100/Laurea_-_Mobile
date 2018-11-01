@@ -1,12 +1,12 @@
 let databaseHandler = {
     db: null,
     createDatabase:  () => {
-        this.db = window.openDatabase(
+        databaseHandler.db = window.openDatabase(
             "UserManager.db",
             "1.0",
             "accounts database",
             1000000);
-        this.db.transaction((tx) => {
+        databaseHandler.db.transaction((tx) => {
                 tx.executeSql(
                     "create table if not exists accounts(_id int primary key, username text, password text)",
                     [],
