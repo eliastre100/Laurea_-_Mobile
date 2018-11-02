@@ -22,3 +22,21 @@ function addAccount() {
         alert("Invalid parameters");
     }
 }
+
+$(document).on("pageshow","#loadpage", async () => {
+    const data = await generateDataTable();
+    $('#data').html(data);
+});
+
+async function generateDataTable() {
+    const accounts = await accounttHandler.getAccounts();
+    let data = '';
+    accounts.forEach((account) => {
+        data += ' <tr>' +
+            '<th>' + account._id + '</th>' +
+            '<td>' + account.username + '</td>' +
+            '<td>' + account.password + '</td>' +
+            '</tr>'
+    });
+    return data;
+}

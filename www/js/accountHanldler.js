@@ -12,4 +12,15 @@ let accounttHandler = {
             },
         );
     },
+    getAccounts: () => {
+        return new Promise((resolve, reject) => {
+            databaseHandler.db.transaction((tx) => {
+                tx.executeSql(
+                    "SELECT * FROM accounts",
+                    [],
+                    (tx, _results) => { resolve(Array.from(_results.rows)) },
+                    (tx, error) => { reject(error) }
+                )
+            })});
+    }
 };

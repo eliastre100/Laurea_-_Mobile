@@ -45,6 +45,37 @@
                 </form>
             </div>
         </div>
+
+        <div data-role="page" id="loadpage">
+            <div data-role="panel" id="loadPagePanel">
+                <h1>Menu</h1>
+                <ul data-role="listview" data-inset="true">
+                    <li data-role="list-divider">Accounts</li>
+                    <li data-icon="plus"><a href="#addpage">Add</a></li>
+                    <li data-icon="grid"><a href="#loadpage">Load</a></li>
+                </ul>
+            </div>
+            <div data-role="header" data-position="fixed">
+                <a href="#loadPagePanel"
+                   class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all uishadow"></a>
+                <h1>list account</h1>
+            </div>
+            <div data-role="main" class="ui-content">
+                <table data-role="table" id="table-column-toggle" data-mode="columntoggle" class="ui-responsive table-stroke ui-table ui-table-columntoggle">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Username</th>
+                            <th>Password</th>
+                        </tr>
+                    </thead>
+                    <tbody id="data">
+                        <!-- Here will goes the datas -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
         <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
         <script type="text/javascript" src="cordova.js"></script>
