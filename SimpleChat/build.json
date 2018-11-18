@@ -1,0 +1,11 @@
+{
+     "android": {
+      "release": {
+        "keystore": "C:\\Users\\Antoine FORET\\Documents\\Mobile\\SimpleChat\\key.keystore",
+        "storePassword": "laurea",
+        "alias": "laureaMobile",
+        "password": "laurea",
+        "keystoreType": ""
+      }
+     }
+ }
